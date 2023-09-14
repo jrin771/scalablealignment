@@ -60,15 +60,15 @@
 <h2> First off, what is alignment?</h2> 
   <ul>  
     <li>"When I say an AI A is aligned with an operator H, I mean: A is trying to do what H wants it to do. I use alignment as a statement about the motives of the [model], not about [it's] knowledge or ability." -Paul Christiano, Former Head of OpenAI Alignment (words in [] are replaced for cohesiveness) </li> 
-    <li>As an add-on, although this doesn't further answer the question of "what is alignment?", it does bring up  </li> 
+    <li>As an add-on, although this doesn't further answer the question of "what is alignment?", it does bring up  </li>  
+    <li>There's concerns of alignment taxes like, we made it worse by aligning, but RLHF and InstructGPT, the later of which I'll cover soon, actually make the models a lot more usable. Less orthogonal, more related. </li>
     <li>P!=NP PROBLEM OF OBSERVING VS PRODUCING, AND HOW THIS IS INFLUENCING THEIR EFFORTS AND THOUGHTS AROUND THIS. </li>
   </ul>
   
 <h2> Second, what's superintelligence?</h2> 
   <ul>  
-    <li>"AI systems much smarter than humans" - OpenAI</li>
-    <li>Note, I think using "smarter" leads to bad mental pictures. Smarter, in this case, means more knowledge and ability than humans to achieve a given goal.  </li> 
-    <li>(Some might complain that this is still quite vague, which I would agree with you on, but refer back to "Mindset")</li>
+    <li>"AI systems much smarter than humans" - OpenAI</li> 
+    <li>"And the kind of superintelligence we’re picturing here is a system that is vastly smarter than humans, that could possibly execute much faster. You can run it a lot in parallel, it could collaborate with many, many copies of itself, so a truly vastly powerful system." - Jan Leike</li>
   </ul>
   
 <h2> Thus, what's superalignment?</h2> 
@@ -78,15 +78,33 @@
   
 <h2> What are the core concepts driving this effort?</h2> 
   <ul>  
-    <li>Honesty - Tell me if you know or don't know or why you're doing it? It doesn't mean "hey, you know why </li> 
+    <li>Honesty - Is it telling the truth? (This doesn't necessarily mean we know every neuron, just like we don't know every neuron of a person, but we know if they're telling the truth) </li>  
+    <li>What is it?</li> 
+    <li>Why is it important?</li> 
+    <li>Why is it hard?</li> 
+    
     <li>Interpretability- What is it doing?</li> 
-    <li>Agreement from experts - this is a big one mentioned by jan because you have squeezing of economics on one side, but also "we don't know" what do you do? Prefer as much certainty as possible</li>
-    <li></li>
+    <li>What is it?</li> 
+    <li>Why is it important?</li> 
+    <li>Why is it hard?</li> 
+    
+    <li>Agreement from human experts</li> 
+    <li>What is it? Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. </li>
+    <li>Why is it important? Commercial pressure to release models is strong and decisiveness is crucial. </li> 
+    <li>Why is it hard?</li> 
   
   </ul> 
-<h2> Ok, so how do we do that? (The Good Part) </h2> 
+<h2> Ok, so what is the actual structure of this effort in the niche details?</h2> 
   <ul>  
-    <li>To start, each of these approaches are briefly summmarized. </li>
+    <li>Here is (from an interview Jan Leike did) like the main strategy they're doing: </li> 
+    <li>2 year plan: Reduce the problem to an engineering problem. I.e. discover the key ideas and just scale them up</li> 
+    <li>3 year plan:Be mostly done with the ai alignment researcher (so that you can deploy it at scale and really ramp up)</li>  
+    <li>Ok another point to explicitly mention is that there are very wide error bars. Perhaps capabilities go up, perhaps  </li>
+
+  </ul>
+<h2> Specific Approaches </h2> 
+  <ul>  
+       <li>Right now speculating about year 3 doesn't make sense, but for year 2 "here are the techniques" this is what I've seen referenced across lots of stuff.</li>
     <li> Additional Pages with significantly more detail will be added (and I hope to include perspectives from many, many people working on this.) </li>  
     
     <li>WebGPT</li>  
@@ -95,13 +113,28 @@
     <li>How does it fit in with the "big picture": You can't do anything without truthfulness and reiability</li>
 
     
-    <li>InstructGPT</li> 
+    <li>InstructGPT (Jan Is very bullish)</li> 
     <li>GPT-4 Reviewing GPT-2</li> 
     <li>Codex/Copilot/Coding AIs</li> 
-    <li>Generalization of AI from easy problems to hard problems ("grokking")</li>  
-    <li></li>
-  </ul>
-</div>
+    <li>Generalization of AI from easy problems to hard problems ("grokking"), this is what Collin Burns is doing more of like why does it jailbreak if not?</li>   
 
+    
+    <li>Collin Burns "Learning Latent Representations" </li> 
+    <li>Language Models don't always say what they think</li>  
+
+    <li>Debate strategies</li>
+
+    <li>Recursive Reward Modeling</li> 
+
+    <li></li>
+
+    <li></li>
+  </ul> 
+<h2> List of Changes</h2> 
+  <ul>  
+    <li><b>This list exists to ensure accountability, transparency, and to provide value to current and future internet historians. Date format is Day-Month-Year (AD System)</b></li> 
+  </ul> 
+  
+</div>
 </body>
 </html>
