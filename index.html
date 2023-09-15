@@ -46,7 +46,7 @@
     <li>OpenAI recently announced the formation of the <a href="https://openai.com/blog/introducing-superalignment">Superalignment team. </a></li> 
     <li>Their mission is to solve the core technical challenges of superintelligence alignment in four years. </li> 
     <li>Their approach is to build a roughly human-level automated alignment researcher that they can then scale up and use to iteratively align superintelligence. </li>
-    <li>This team is now Ilya Sutskever's main research focus and has 20% of OpenAI's compute. </li>
+    <li><b>This team is now Ilya Sutskever's main research focus and has 20% of OpenAI's compute.</b></li>
     <li>Despite a <a href="https://spectrum.ieee.org/the-alignment-problem-openai ">handful </a> of media <a href="https://techcrunch.com/2023/07/05/openai-is-forming-a-new-team-to-bring-superintelligent-ai-under-control/ ">attention</a>, I don't see many people talking about this right now. </li> 
     <li>This is suprising to me. </li>
     <li>I believe this area needs <b>significantly</b> more attention; events like this don't happen often. </li>    
@@ -65,7 +65,7 @@
   <ul>   
     <li>Here's a good definition from Paul Christiano, the former head of OpenAI's Alignmentt team <a href="https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6">(edited for cohesiveness)</a> </li>
     <li>"When I say an AI "A" is aligned with an operator "H", I mean: "A" is trying to do what "H" wants it to do. I use alignment as a statement about the motives of "A", not about it's knowledge or ability." </li> 
-    <li>There are entire websites dedicated just for discussing AI Alignment, so I won't spend too much additional time here. However, here are three other points to know:</li> 
+    <li>Three additional items of importance:</li>
     <li><b>First,</b> if we're trying to align an AI to human values the question arises of who's values? This is <b>incredibly important to consider</b>, but superalignment appears to be focused on a subset of that question, which is "can we align it to ANY values at all?"</li>
     <li><b>Second,</b> it's easier to check solutions for superalignment than to solve superalignment. This is a property of P vs NP which you can read about more <a href="https://en.wikipedia.org/wiki/P_versus_NP_problem">here.</a> </li>
     <li><b>Third,</b> there's concern about alignment making systems worse; this is called an <a href="https://aligned.substack.com/p/three-alignment-taxes">"alignment tax".</a> Luckily, as I'll examine later, this doesn't seem to be the case, and in fact the opposite. </li>
@@ -75,7 +75,7 @@
   <ul>  
     <li>"AI systems much smarter than humans" - OpenAI</li> 
     <li>"And the kind of superintelligence we’re picturing here is a system that is vastly smarter than humans, that could possibly execute much faster. You can run it a lot in parallel, it could collaborate with many, many copies of itself, so a truly vastly powerful system." - <a href="https://axrp.net/episode/2023/07/27/episode-24-superalignment-jan-leike.html#four-year-deadline">Jan Leike</a></li>
-    <li>These are both vague but are the best I could find. This is an area for improvement, but I suspect it will only come from getting closer to these aims.</li>
+    <li>These are both vague but are the best I could find. This is an area for improvement, but I suspect it will only come from getting closer to "superintelligence".</li>
   </ul>
   
 <h2> Thus, what's superalignment?</h2> 
@@ -86,57 +86,62 @@
 <h2> What are the core concepts driving this effort?</h2> 
   <ul>  
     <li><b>Honesty</b></li>
-    <li><b>What is it?</b>Having the model be truthful to us about what it knows (and doesn't) and why it does actions (and why it doesn't).</li> 
-    <li><b>Why is it important?</b>Deceitful AI with vast power could end up very badly for humans. This feels self-explanatory. </li> 
-    <li><b>Why is it hard?</b>Sometimes the model doesn't know either. Current best approaches involve looking into the latent space of models, rather than taking them at face value (which we'll cover more) but this is still an area of basic research.</li> 
+    <li><b>What is it?</b> Having the model be truthful to us about what it knows (and doesn't) and why it does actions (and why it doesn't).</li> 
+    <li><b>Why is it important?</b> Deceitful AI with vast power could end up very badly for humans. This feels self-explanatory. </li> 
+    <li><b>Why is it hard?</b> Sometimes the model doesn't know either. Current best approaches involve looking into the latent space of models, rather than taking them at face value (which we'll cover more) but this is still an area of basic research.</li> 
     
     <li><b>Interpretability</b></li> 
-    <li><b>What is it?</b>Knowing what's going on inside the AI. This is different from honesty because it spans many size scales (from individual neuron to full model), but it is related. </li> 
-    <li><b>Why is it important?</b>Without good ways of interpreting models, ensuring that they're not going to be dangerous is very hard.</li> 
-    <li><b>Why is it hard?</b>Current Frontier Models are extremely large and complicated, somewhat like real brains. (Yes, I know the brain doesn't do backpropagation, it's just an analogy) Right now we can only interpert very small systems. We'll need to scale FAST. </li> 
+    <li><b>What is it?</b> Knowing what's going on inside the AI. This is different from honesty because it spans many size scales (from individual neuron to full model), but it is related. </li> 
+    <li><b>Why is it important?</b> Without good ways of interpreting models, ensuring that they're not going to be dangerous is very hard.</li> 
+    <li><b>Why is it hard?</b> Current Frontier Models are extremely large and complicated, somewhat like real brains. (Yes, I know the brain doesn't do backpropagation, it's just an analogy) Right now we can only interpert very small systems. We'll need to scale FAST. </li> 
     
     <li><b>Human Expert Agreement</b></li> 
     <li><b>What is it?</b> Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. What would you do?</li> 
-    <li><b>Why is it important?</b>To avoid accidents born from commercial presures pulling in one direction and uncertainty pulling in the other.</li> 
-    <li><b>Why is it hard?</b>The only way to avoid this disagreement is to either have Honesty or Interpretability work, which are both hard. </li> 
-
+    <li><b>Why is it important?</b> To avoid accidents born from commercial presures pulling in one direction and uncertainty pulling in the other.</li> 
+    <li><b>Why is it hard?</b> The only way to avoid this disagreement is to either have Honesty or Interpretability work, which are both hard. </li> 
+  </ul>
   
-  </ul> 
 <h2> Ok, so what is the actual structure of this effort in the niche details?</h2> 
   <ul>  
     <li>Here is (from <a href="https://axrp.net/episode/2023/07/27/episode-24-superalignment-jan-leike.html#four-year-deadline">an interview Jan Leike (Co-Lead of Superalignment)</a> did) the main strategy they're attempting: </li> 
-    <li>2-year goal: Reduce superalignment to an engineering problem. I.e. discover the key ideas and just scale them up</li> 
-    <li>3-year goal: Be mostly done with the automated AI alignment researcher so that they can scale it up to "millions of copies". </li>  
-
+    <li><b>2-year goal:</b> Reduce superalignment to an engineering problem. i.e. discover the key ideas and just scale them up</li> 
+    <li><b>3-year goal:</b> Be mostly done with the automated AI alignment researcher so that they can scale it up to "millions of copies". </li>  
   </ul>
+  
 <h2> Specific Approaches </h2> 
   <ul>  
-       <li>Right now speculating about year 3 doesn't make sense, but for year 2 "here are the techniques" this is what I've seen referenced across lots of stuff.</li>
-    <li> Additional Pages with significantly more detail will be added (and I hope to include perspectives from many, many people working on this.) </li>  
+    <li>Right now nobody knows what's going to happen at Year 3/4, but for Year 2 here is a (non-exhaustive) list of promising techniques OpenAI has mentioned. </li>
+    <li> Additional pages covering these techniques will be written in more detail (preferrably with community assistance) soon. </li>  
+
+
+    
+    <li><b>What is it?</b></li>
+    <li><b>Why is it important/interesting/etc.?</b></li> 
+    <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b></li>
+
+
     
     <li>WebGPT</li>  
-    <li>What is it:GPT-3 gets hooked up to google</li>
-    <li>Why is it important/interesting/etc. on its own.: LLMs are known to hallucinate (make things up). If it could search and back up its claims, it could be more truthful and reliable.</li> 
-    <li>How does it fit in with the "big picture": You can't do anything without truthfulness and reiability</li>
-
     
     <li>InstructGPT (Jan Is very bullish)</li> 
+    
     <li>GPT-4 Reviewing GPT-2</li> 
+    
     <li>Codex/Copilot/Coding AIs</li> 
+    
     <li>Generalization of AI from easy problems to hard problems ("grokking"), this is what Collin Burns is doing more of like why does it jailbreak if not?</li>   
-
     
     <li>Collin Burns "Learning Latent Representations" </li> 
+    
     <li>Language Models don't always say what they think</li>  
 
     <li>Debate strategies</li>
 
     <li>Recursive Reward Modeling</li> 
 
-    <li></li>
 
-    <li></li>
   </ul> 
+  
 <h2> List of Changes</h2> 
   <ul>  
     <li><b>This list exists to ensure accountability, transparency, and to provide value to current and future internet historians. Date format is Day-Month-Year (AD System)</b></li> 
