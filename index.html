@@ -113,73 +113,73 @@
 <ul>
   <li>Right now nobody knows what's going to happen at Year 3/4, but for Year 2 here is a (non-exhaustive) list of promising techniques OpenAI has mentioned.</li>
   <li>Additional pages covering these techniques will be written in more detail (preferably with community assistance) soon.</li>
-  <li><h3>WebGPT</h3>
+  <li><h3><a href="https://openai.com/research/webgpt">WebGPT</a></h3>
     <ul>
-      <li><b>What is it?</b>: WebGPT is an extension of GPT that incorporates a web-browsing capability. It can perform web searches to verify information before generating a response.</li>
-      <li><b>Why is it important/interesting?</b>: It addresses the issue of hallucination and credibility. With web browsing, the model can fetch real-time data and verify facts, reducing erroneous claims.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: In the context of alignment, a model that can verify its claims is closer to being aligned with human values for accuracy and truthfulness.</li>
+      <li><b>What is it?</b> GPT-3 but it can do web searches to verify responses. </li>
+      <li><b>Why is it important/interesting?</b> It addresses the issue of hallucination (making things up). </li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This is one way to make models more honest and more useful for alignment-related work.</li>
     </ul>
   </li>
-  <li><h3>InstructGPT</h3>
+  <li><h3><a href="https://openai.com/research/instruction-following">InstructGPT</a></h3>
     <ul>
-      <li><b>What is it?</b>: InstructGPT is trained to follow a prompt's instruction more closely than vanilla GPT.</li>
-      <li><b>Why is it important/interesting?</b>: It has higher task-specific performance and reduces irrelevant output, effectively generating more aligned responses.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: Higher task alignment on a micro-level could be a building block for broader AI alignment strategies.</li>
+      <li><b>What is it?</b> RLHF data is used to fine-tune a 1.3B (100x less parameters) GPT-3 that performs just as well as GPT-3. </li>
+      <li><b>Why is it important/interesting?</b> Smaller models, which are generally more interpretable, can match the performance of big models. </li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> GPT-4 isn't good enough for real alignment work, but let's say GPT-5 is. We could distill it down to a smaller, more interpretable model, and use that as our solution. </li>
     </ul>
   </li>
-  <li><h3>GPT-4 Reviewing GPT-2</h3>
+  <li><h3><a href="https://openai.com/research/language-models-can-explain-neurons-in-language-models">Language models can explain neurons in language models</a></h3>
     <ul>
-      <li><b>What is it?</b>: A hypothetical scenario where a more advanced model (GPT-4) evaluates the limitations and capabilities of a previous version (GPT-2).</li>
-      <li><b>Why is it important/interesting?</b>: This self-assessment can offer insights into how models view their limitations, thus aiding in alignment research.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: Understanding limitations transparently is critical for creating a meta-level alignment researcher.</li>
+      <li><b>What is it?</b> A hypothetical scenario where a more advanced model (GPT-4) evaluates the limitations and capabilities of a previous version (GPT-2).</li>
+      <li><b>Why is it important/interesting?</b> This self-assessment can offer insights into how models view their limitations, thus aiding in alignment research.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Understanding limitations transparently is critical for creating a meta-level alignment researcher.</li>
     </ul>
-  <li><h3>Codex/Copilot/Coding AIs</h3>
+  <li><h3><a href="https://openai.com/research/evaluating-large-language-models-trained-on-code">Codex</a></h3>
     <ul>
-      <li><b>What is it?</b>: These are AI systems designed to assist with coding tasks.</li>
-      <li><b>Why is it important/interesting?</b>: They demonstrate real-world utility and offer a sandbox to explore alignment in a constrained, task-specific domain.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: Insights gained from these narrower contexts can be generalized to broader alignment issues.</li>
+      <li><b>What is it?</b> AI that can help you code. </li>
+      <li><b>Why is it important/interesting?</b>Code generation is a very economically useful task and can make models more advanced. (Same with Textbooks...Phi-1.5) </li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Coding AIs will be the core of the automated AI alignment researcher, as its a necessary requirement for the job. </li>
     </ul>
   </li>
-  <li><h3>Generalization ("grokking")</h3>
+  <li><h3>Generalization ("grokking"/PLEASE SUGGEST HIGH-QUALITY RELEVANT PAPERS)</h3>
     <ul>
-      <li><b>What is it?</b>: The study of how well AI models generalize from their training data to unseen but related tasks.</li>
-      <li><b>Why is it important/interesting?</b>: AI systems need to generalize well to be useful and safe in real-world, dynamic environments.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: A model that generalizes well is more likely to understand the abstract principles underlying alignment.</li>
+      <li><b>What is it?</b> The study of how well AI models generalize from their training data to unseen but related tasks.</li>
+      <li><b>Why is it important/interesting?</b> AI systems need to generalize well to be useful and safe in real-world, dynamic environments.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> A model that generalizes well is more likely to understand the abstract principles underlying alignment.</li>
     </ul>
   </li>
   <li><h3>Collin Burns "Learning Latent Representations"</h3>
     <ul>
-      <li><b>What is it?</b>: Research into how models can learn underlying features or structures from data.</li>
-      <li><b>Why is it important/interesting?</b>: Better representations can result in more accurate and insightful output.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: More precise representations can aid in understanding complex alignment tasks.</li>
+      <li><b>What is it?</b> Research into how models can learn underlying features or structures from data.</li>
+      <li><b>Why is it important/interesting?</b> Better representations can result in more accurate and insightful output.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> More precise representations can aid in understanding complex alignment tasks.</li>
     </ul>
   </li>
   <li><h3>Language Models don't always say what they think</h3>
     <ul>
-      <li><b>What is it?</b>: The observation that language models often produce outputs that may not fully reflect their "understanding" due to various biases and limitations.</li>
-      <li><b>Why is it important/interesting?</b>: This is a key issue in alignment, as it raises questions about the model's internal states versus its outputs.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: It highlights the need for interpretability and introspection in alignment research.</li>
+      <li><b>What is it?</b> The observation that language models often produce outputs that may not fully reflect their "understanding" due to various biases and limitations.</li>
+      <li><b>Why is it important/interesting?</b> This is a key issue in alignment, as it raises questions about the model's internal states versus its outputs.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> It highlights the need for interpretability and introspection in alignment research.</li>
     </ul>
   </li>
   <li><h3>Debate strategies</h3>
     <ul>
-      <li><b>What is it?</b>: A method where multiple AI agents debate a topic to generate more accurate and nuanced outputs.</li>
-      <li><b>Why is it important/interesting?</b>: It introduces adversarial dynamics to produce more robust and reliable answers.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: Debate can be a tool for surfacing limitations and biases, thus aiding alignment.</li>
+      <li><b>What is it?</b> A method where multiple AI agents debate a topic to generate more accurate and nuanced outputs.</li>
+      <li><b>Why is it important/interesting?</b> It introduces adversarial dynamics to produce more robust and reliable answers.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Debate can be a tool for surfacing limitations and biases, thus aiding alignment.</li>
     </ul>
   </li>
   <li><h3>Recursive Reward Modeling</h3>
     <ul>
-      <li><b>What is it?</b>: A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
-      <li><b>Why is it important/interesting?</b>: It offers a way to align a model’s objectives with human-defined goals.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
+      <li><b>What is it?</b> A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
+      <li><b>Why is it important/interesting?</b> It offers a way to align a model’s objectives with human-defined goals.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
     </ul>
   </li>
   <li><h3>Self-Critiquing Models</h3>
     <ul>
-      <li><b>What is it?</b>: A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
-      <li><b>Why is it important/interesting?</b>: It offers a way to align a model’s objectives with human-defined goals.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>: This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
+      <li><b>What is it?</b> A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
+      <li><b>Why is it important/interesting?</b> It offers a way to align a model’s objectives with human-defined goals.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
     </ul>
   </li>
 </ul>
