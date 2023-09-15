@@ -135,9 +135,9 @@
   </li>
   <li><h3><a href="https://openai.com/research/language-models-can-explain-neurons-in-language-models">Language models can explain neurons in language models</a></h3>
     <ul>
-      <li><b>What is it?</b> A hypothetical scenario where a more advanced model (GPT-4) evaluates the limitations and capabilities of a previous version (GPT-2).</li>
-      <li><b>Why is it important/interesting?</b> This self-assessment can offer insights into how models view their limitations, thus aiding in alignment research.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Understanding limitations transparently is critical for creating a meta-level alignment researcher.</li>
+      <li><b>What is it?</b> GPT-4 explains GPT-2. Three-step process: Given a GPT-2 neuron, GPT-4 generates an explanation for what it does. Then, GPT-4 simulates the GPT-2 Neuron. Finally, these two are compared by their similarity.  </li>
+      <li><b>Why is it important/interesting?</b> Humans normally do the explanation of neurons by hand, this automates it. (Even if it isn't very good and is a large model doing it for a small model instead of vice versa)</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b>This is a (rough) MVP of what an automated AI Alignment researcher would do. </li>
     </ul>
   <li><h3><a href="https://openai.com/research/evaluating-large-language-models-trained-on-code">Codex</a></h3>
     <ul>
@@ -146,14 +146,14 @@
       <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Coding AIs will be the core of the automated AI alignment researcher, as its a necessary requirement for the job. </li>
     </ul>
   </li>
-  <li><h3>Generalization ("grokking"/PLEASE SUGGEST HIGH-QUALITY RELEVANT PAPERS)</h3>
+  <li><h3><a href="https://arxiv.org/abs/2106.04537">Easy to Hard Generalization</a></h3>
     <ul>
-      <li><b>What is it?</b> The study of how well AI models generalize from their training data to unseen but related tasks.</li>
-      <li><b>Why is it important/interesting?</b> AI systems need to generalize well to be useful and safe in real-world, dynamic environments.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> A model that generalizes well is more likely to understand the abstract principles underlying alignment.</li>
+      <li><b>What is it?</b>I'm not referencing the paper mentioned here specifically, but can can the same neural networks trained on small tasks generalize to large "hard" tasks?</li>
+      <li><b>Why is it important/interesting?</b> The model might be safe for some small, trivial tasks, but then utterly fail at big tasks. (Ex. Jailbreaking GPT-4)</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> How do we know our automated AI alignment researcher won't fail to generalize? This should help with it. </li>
     </ul>
   </li>
-  <li><h3><a href="https://arxiv.org/abs/2212.03827">Discovering Latent Knowledge in Language Models Without Supervision</a> (GOD READ THIS PAPER MORE I WANT THIS TO BE GOOD)</h3>
+  <li><h3><a href="https://arxiv.org/abs/2212.03827">Discovering Latent Knowledge in Language Models Without Supervision</a></h3>
     <ul>
       <li><b>What is it?</b> Research into how models can learn underlying features or structures from data.</li>
       <li><b>Why is it important/interesting?</b> Better representations can result in more accurate and insightful output.</li>
@@ -162,30 +162,16 @@
   </li>
   <li><h3><a href="https://arxiv.org/abs/2305.04388">Language Models Don't Always Say What They Think</a></h3>
     <ul>
-      <li><b>What is it?</b> The observation that language models often produce outputs that may not fully reflect their "understanding" due to various biases and limitations.</li>
-      <li><b>Why is it important/interesting?</b> This is a key issue in alignment, as it raises questions about the model's internal states versus its outputs.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> It highlights the need for interpretability and introspection in alignment research.</li>
-    </ul>
-  </li>
-  <li><h3>Debate strategies</h3>
-    <ul>
-      <li><b>What is it?</b> A method where multiple AI agents debate a topic to generate more accurate and nuanced outputs.</li>
-      <li><b>Why is it important/interesting?</b> It introduces adversarial dynamics to produce more robust and reliable answers.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> Debate can be a tool for surfacing limitations and biases, thus aiding alignment.</li>
-    </ul>
-  </li>
-  <li><h3>Recursive Reward Modeling</h3>
-    <ul>
-      <li><b>What is it?</b> A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
-      <li><b>Why is it important/interesting?</b> It offers a way to align a model’s objectives with human-defined goals.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
+      <li><b>What is it?</b> Chain of Thought (CoT), or "step-by-step" reasoning is thought to improve LLM reasoning. Instead, the authors gave the model examples of multiple choice questions where the answers were all A and the model didn't explain why it chose A for the answers, it instead made up a reason. CoT doesn't always mean "it perfectly knows what it's doing."</li>
+      <li><b>Why is it important/interesting?</b> Helps to avoid a potential faulty assumption. </li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This would be a problem (not CoT specifically, which may evolve, but models not being honest about why they're taking an action) that is important to solve. </li>
     </ul>
   </li>
   <li><h3><a href="https://arxiv.org/abs/2206.05802">Self-critiquing models for assisting human evaluator</a></h3>
     <ul>
-      <li><b>What is it?</b> A process where models are trained to predict the rewards that a human would assign, and these predictions are used for training.</li>
-      <li><b>Why is it important/interesting?</b> It offers a way to align a model’s objectives with human-defined goals.</li>
-      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This directly aims at solving the alignment problem by fine-tuning objectives to be in line with human values.</li>
+      <li><b>What is it?</b> Fine-tuned two LLMs, one to summarize articles, another to critique the articles. The critiquing LLM was able to find flaws that humans couldn't in the summarizing LLM.</li>
+      <li><b>Why is it important/interesting?</b> It helps to scale up alignment work and helps to find things that humans would otherwise miss. </li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> This could be an easily automated task: "critique all outputs of our work."</li>
     </ul>
   </li>
 </ul>
