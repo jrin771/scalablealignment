@@ -85,20 +85,26 @@
   
 <h2> What are the core concepts driving this effort?</h2> 
   <ul>  
-    <li><b>Honesty</b></li>
-    <li><b>What is it?</b> Having the model be truthful to us about what it knows (and doesn't) and why it does actions (and why it doesn't).</li> 
-    <li><b>Why is it important?</b> Deceitful AI with vast power could end up very badly for humans. This feels self-explanatory. </li> 
-    <li><b>Why is it hard?</b> Sometimes the model doesn't know either. Current best approaches involve looking into the latent space of models, rather than taking them at face value (which we'll cover more) but this is still an area of basic research.</li> 
-    
-    <li><b>Interpretability</b></li> 
-    <li><b>What is it?</b> Knowing what's going on inside the AI. This is different from honesty because it spans many size scales (from individual neuron to full model), but it is related. </li> 
-    <li><b>Why is it important?</b> Without good ways of interpreting models, ensuring that they're not going to be dangerous is very hard.</li> 
-    <li><b>Why is it hard?</b> Current Frontier Models are extremely large and complicated, somewhat like real brains. (Yes, I know the brain doesn't do backpropagation, it's just an analogy) Right now we can only interpert very small systems. We'll need to scale FAST. </li> 
-    
-    <li><b>Human Expert Agreement</b></li> 
-    <li><b>What is it?</b> Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. What would you do?</li> 
-    <li><b>Why is it important?</b> To avoid accidents born from commercial presures pulling in one direction and uncertainty pulling in the other.</li> 
-    <li><b>Why is it hard?</b> The only way to avoid this disagreement is to either have Honesty or Interpretability work, which are both hard. </li> 
+      <li><h3>Honesty</h3>
+    <ul>
+      <li><b>What is it?</b> The study of how well AI models generalize from their training data to unseen but related tasks.</li>
+      <li><b>Why is it important/interesting?</b> AI systems need to generalize well to be useful and safe in real-world, dynamic environments.</li>
+      <li><b>How does this fit in with "Automated AI Alignment Researcher"?</b> A model that generalizes well is more likely to understand the abstract principles underlying alignment.</li>
+    </ul>
+    </li> 
+      <li><h3>Interpretability</h3>
+    <ul>
+      <li><b>What is it?</b> Knowing what's going on inside the AI. This is different from honesty because it spans many size scales (from individual neuron to full model), but it is related. </li> 
+      <li><b>Why is it important?</b> Without good ways of interpreting models, ensuring that they're not going to be dangerous is very hard.</li> 
+      <li><b>Why is it hard?</b> Current Frontier Models are extremely large and complicated, somewhat like real brains. (Yes, I know the brain doesn't do backpropagation, it's just an analogy) Right now we can only interpert very small systems. We'll need to scale FAST. </li> 
+    </ul>
+    </li>
+      <li><h3>Human Expert Agreement</h3>
+    <ul>
+      <li><b>What is it?</b> Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. What would you do?</li> 
+      <li><b>Why is it important?</b> To avoid accidents born from commercial presures pulling in one direction and uncertainty pulling in the other.</li> 
+      <li><b>Why is it hard?</b> The only way to avoid this disagreement is to either have Honesty or Interpretability work, which are both hard. </li> 
+    </ul>
   </ul>
   
 <h2> What's the medium-term strategy of this effort? </h2> 
