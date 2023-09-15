@@ -66,15 +66,16 @@
     <li>Here's a good definition from Paul Christiano, the former head of OpenAI's Alignmentt team <a href="https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6">(edited for cohesiveness)</a> </li>
     <li>"When I say an AI "A" is aligned with an operator "H", I mean: "A" is trying to do what "H" wants it to do. I use alignment as a statement about the motives of "A", not about it's knowledge or ability." </li> 
     <li>There are entire websites dedicated just for discussing AI Alignment, so I won't spend too much additional time here. However, here are three other points to know:</li> 
-    <li>First, The humanities side of alignment (if we're trying to align an AI to human values) is the question: "who's values". This is <b>incredibly important to consider</b>, but superalignment appears to be focused on a subset of that question, which is "can we align it to ANY values at all?"</li>
-    <li>Second, it is easier to check solutions for superalignment than to solve superalignment. This is a property of the ongoing open theoretical computer science question P vs NP which you can read in more depth about here, but is useful because it gives us a clue: checking is easier than solving. </li>
-    <li>Third, there's some concern about alignment making systems worse, called an <a href="https://aligned.substack.com/p/three-alignment-taxes">"alignment tax".</a> Luckily, as I'll examine later, this doesn't seem to be the case, and in fact the opposite. </li>
+    <li>First, if we're trying to align an AI to human values the question arises of who's values? This is <b>incredibly important to consider</b>, but superalignment appears to be focused on a subset of that question, which is "can we align it to ANY values at all?"</li>
+    <li>Second, it's easier to check solutions for superalignment than to solve superalignment. This is a property of P vs NP which you can read about more <a href="https://en.wikipedia.org/wiki/P_versus_NP_problem">here.</a> </li>
+    <li>Third, there's concern about alignment making systems worse; this is called an <a href="https://aligned.substack.com/p/three-alignment-taxes">"alignment tax".</a> Luckily, as I'll examine later, this doesn't seem to be the case, and in fact the opposite. </li>
   </ul>
   
 <h2> Second, what's superintelligence?</h2> 
   <ul>  
     <li>"AI systems much smarter than humans" - OpenAI</li> 
-    <li>"And the kind of superintelligence we’re picturing here is a system that is vastly smarter than humans, that could possibly execute much faster. You can run it a lot in parallel, it could collaborate with many, many copies of itself, so a truly vastly powerful system." - Jan Leike</li>
+    <li>"And the kind of superintelligence we’re picturing here is a system that is vastly smarter than humans, that could possibly execute much faster. You can run it a lot in parallel, it could collaborate with many, many copies of itself, so a truly vastly powerful system." - <a href="https://axrp.net/episode/2023/07/27/episode-24-superalignment-jan-leike.html#four-year-deadline">Jan Leike</a></li>
+    <li>These are both vague but are the best I could find. This is an area for improvement, but I suspect it will only come from getting closer to these aims.</li>
   </ul>
   
 <h2> Thus, what's superalignment?</h2> 
@@ -84,20 +85,21 @@
   
 <h2> What are the core concepts driving this effort?</h2> 
   <ul>  
-    <li>Honesty - Is it telling the truth? (This doesn't necessarily mean we know every neuron, just like we don't know every neuron of a person, but we know if they're telling the truth) </li>  
-    <li>What is it?</li> 
-    <li>Why is it important?</li> 
-    <li>Why is it hard?</li> 
+    <li><b>Honesty</b></li>
+    <li><b>What is it?</b>Having the model be truthful to us about what it knows (and doesn't) and why it does actions (and why it doesn't).</li> 
+    <li><b>Why is it important?</b>Deceitful AI with vast power could end up very badly for humans. This feels self-explanatory. </li> 
+    <li><b>Why is it hard?</b>Sometimes the model doesn't know either. Current best approaches involve looking into the latent space of models, rather than taking them at face value (which we'll cover more) but this is still an area of basic research.</li> 
     
-    <li>Interpretability- What is it doing?</li> 
-    <li>What is it?</li> 
-    <li>Why is it important?</li> 
-    <li>Why is it hard?</li> 
+    <li><b>Interpretability</b></li> 
+    <li><b>What is it?</b>Knowing what's going on inside the AI. This is different from honesty because it spans many size scales (from individual neuron to full model), but it is related. </li> 
+    <li><b>Why is it important?</b>Without good ways of interpreting models, ensuring that they're not going to be dangerous is very hard.</li> 
+    <li><b>Why is it hard?</b>Current Frontier Models are extremely large and complicated, somewhat like real brains. (Yes, I know the brain doesn't do backpropagation, it's just an analogy) Right now we can only interpert very small systems. We'll need to scale FAST. </li> 
     
-    <li>Agreement from human experts</li> 
-    <li>What is it? Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. </li>
-    <li>Why is it important? Commercial pressure to release models is strong and decisiveness is crucial. </li> 
-    <li>Why is it hard?</li> 
+    <li><b>Human Expert Agreement</b></li> 
+    <li><b>What is it?</b> Let's say GPT-6 has finished training and it's ready to be shipped to make a lot of money but there isn't conclusive evidence that it's aligned. The team wait a few weeks for more tests to be done but then it still is inconclusive. What would you do?</li> 
+    <li><b>Why is it important?</b>To avoid accidents born from commercial presures pulling in one direction and uncertainty pulling in the other.</li> 
+    <li><b>Why is it hard?</b>The only way to avoid this disagreement is to either have Honesty or Interpretability work, which are both hard. </li> 
+
   
   </ul> 
 <h2> Ok, so what is the actual structure of this effort in the niche details?</h2> 
